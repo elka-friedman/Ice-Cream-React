@@ -6,7 +6,7 @@ function App() {
   const icecream = {
     title: "Ice Cream Flavors",
     feedback: {
-      rating: 4.8,
+      rating: 3.8,
     },
     flavors: [
       { name: "Strawberry", favorite: false },
@@ -16,8 +16,13 @@ function App() {
       { name: "Cookie Dough", favorite: true },
     ],
   };
-  return (<IceCreamTitle title={icecream.title} feedback={icecream.feedback}/>,
-  <IceCreamList flavors = {icecream.flavors} />)
+
+  return (
+    <div>
+      <IceCreamTitle title={icecream.title} feedback={icecream.feedback} />
+      <IceCreamList flavors={icecream.flavors} name={icecream.name} />
+    </div>
+  );
 }
 
 export default App;
